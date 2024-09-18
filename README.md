@@ -1,4 +1,4 @@
-# Samjr
+# samt.blog
 
 To start your Phoenix server:
 
