@@ -1,12 +1,12 @@
-defmodule SamjrWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :samjr
+defmodule SamtWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :samt
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_samjr_key",
+    key: "_samt_key",
     signing_salt: "TAwr1FwC",
     same_site: "Lax"
   ]
@@ -21,9 +21,9 @@ defmodule SamjrWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :samjr,
+    from: :samt,
     gzip: false,
-    only: SamjrWeb.static_paths()
+    only: SamtWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -31,7 +31,7 @@ defmodule SamjrWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :samjr
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :samt
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -49,5 +49,5 @@ defmodule SamjrWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug SamjrWeb.Router
+  plug SamtWeb.Router
 end

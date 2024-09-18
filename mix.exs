@@ -1,9 +1,9 @@
-defmodule Samjr.MixProject do
+defmodule Samt.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :samjr,
+      app: :samt,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule Samjr.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Samjr.Application, []},
+      mod: {Samt.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -75,10 +75,10 @@ defmodule Samjr.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind samjr", "esbuild samjr"],
+      "assets.build": ["tailwind samt", "esbuild samt"],
       "assets.deploy": [
-        "tailwind samjr --minify",
-        "esbuild samjr --minify",
+        "tailwind samt --minify",
+        "esbuild samt --minify",
         "phx.digest"
       ]
     ]

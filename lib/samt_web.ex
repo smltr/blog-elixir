@@ -1,12 +1,12 @@
-defmodule SamjrWeb do
+defmodule SamtWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use SamjrWeb, :controller
-      use SamjrWeb, :html
+      use SamtWeb, :controller
+      use SamtWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -40,10 +40,10 @@ defmodule SamjrWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: SamjrWeb.Layouts]
+        layouts: [html: SamtWeb.Layouts]
 
       import Plug.Conn
-      import SamjrWeb.Gettext
+      import SamtWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -52,7 +52,7 @@ defmodule SamjrWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {SamjrWeb.Layouts, :app}
+        layout: {SamtWeb.Layouts, :app}
 
       unquote(html_helpers())
     end
@@ -84,8 +84,8 @@ defmodule SamjrWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
-      import SamjrWeb.CoreComponents
-      import SamjrWeb.Gettext
+      import SamtWeb.CoreComponents
+      import SamtWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
@@ -98,9 +98,9 @@ defmodule SamjrWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: SamjrWeb.Endpoint,
-        router: SamjrWeb.Router,
-        statics: SamjrWeb.static_paths()
+        endpoint: SamtWeb.Endpoint,
+        router: SamtWeb.Router,
+        statics: SamtWeb.static_paths()
     end
   end
 

@@ -1,6 +1,6 @@
-defmodule Samjr do
+defmodule Samt do
   @moduledoc """
-  Samjr keeps the contexts that define your domain
+  Samt keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

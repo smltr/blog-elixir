@@ -1,4 +1,4 @@
-defmodule SamjrWeb.CoreComponents do
+defmodule SamtWeb.CoreComponents do
   @moduledoc """
   Provides core UI components.
 
@@ -17,7 +17,7 @@ defmodule SamjrWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import SamjrWeb.Gettext
+  import SamtWeb.Gettext
 
   @doc """
   Renders a modal.
@@ -661,9 +661,9 @@ defmodule SamjrWeb.CoreComponents do
     # with our gettext backend as first argument. Translations are
     # available in the errors.po file (as we use the "errors" domain).
     if count = opts[:count] do
-      Gettext.dngettext(SamjrWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(SamtWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(SamjrWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(SamtWeb.Gettext, "errors", msg, opts)
     end
   end
 

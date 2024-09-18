@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports = {
-  content: ["./js/**/*.js", "../lib/samjr_web.ex", "../lib/samjr_web/**/*.*ex"],
+  content: ["./js/**/*.js", "../lib/samt_web.ex", "../lib/samt_web/**/*.*ex"],
   theme: {
     extend: {
       fontFamily: {

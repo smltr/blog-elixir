@@ -1,5 +1,5 @@
-defmodule SamjrWeb.PageControllerTest do
-  use SamjrWeb.ConnCase
+defmodule SamtWeb.PageControllerTest do
+  use SamtWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

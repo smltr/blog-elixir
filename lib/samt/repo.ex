@@ -1,5 +1,5 @@
-defmodule Samjr.Repo do
+defmodule Samt.Repo do
   use Ecto.Repo,
-    otp_app: :samjr,
+    otp_app: :samt,
     adapter: Ecto.Adapters.Postgres
 end
