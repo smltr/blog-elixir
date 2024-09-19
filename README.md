@@ -1,4 +1,4 @@
-# samt.blog
+# trouy.me
 
 To start your Phoenix server:
 
