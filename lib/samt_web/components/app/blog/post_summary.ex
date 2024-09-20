@@ -5,19 +5,17 @@ defmodule SamtWeb.Blog.PostSummary do
 
   def render(assigns) do
     ~H"""
-    <div class="mb-10">
-      <article>
-        <h2 class="text-lg font-bold">
-          <.link href={~p"/blog/#{@post.slug}"}><%= @post.title %></.link>
-        </h2>
-        <p class="text-sm text-gray-400 mt-1">
-          <%= Calendar.strftime(@post.published_at, "%B %d, %Y") %>
-        </p>
-        <p class="mt-1">
-          <%= String.slice(@post.content, 0, 125) <> "..." %>
-        </p>
-      </article>
-    </div>
+    <article class="mb-4">
+      <h2 class="text-md font-bold">
+        <.link class="hover:text-sky-500" href={~p"/blog/#{@post.slug}"}><%= @post.title %></.link>
+      </h2>
+      <time class="text-sm text-gray-400">
+        <%= Calendar.strftime(@post.published_at, "%B %d, %Y") %>
+      </time>
+      <p class="text-sm mt-0.5">
+        <%= String.slice(@post.content, 0, 125) <> "..." %>
+      </p>
+    </article>
     """
   end
 end

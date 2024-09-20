@@ -14,18 +14,18 @@ alias Samt.Repo
 alias Samt.Blog.Post
 
 Repo.insert!(%Post{
-  title: "Hello, world!",
+  title: "The Evolution of Programming Languages: A Brief Overview",
   content: """
-  Good morning world, and all who inhabit it.
+  From the early days of machine code to today's high-level languages, the world of programming has undergone a remarkable transformation. This journey reflects not just technological advancement, but also changes in how we think about problem-solving and human-computer interaction.
 
-  As we embark on this new day, let us take a moment to appreciate the beauty and wonder that surrounds us. From the gentle rustle of leaves in the breeze to the warm rays of sunlight peeking through the clouds, nature offers us countless reminders of the magic of existence.
+  Assembly language marked the first step away from direct machine instructions, offering mnemonics that made code slightly more readable. Then came the revolution of high-level languages like FORTRAN and COBOL, which allowed programmers to express complex ideas in more human-readable form.
 
-  In this interconnected world of ours, we each play a unique role in shaping the collective experience of humanity. Our actions, no matter how small, ripple outwards and touch the lives of others in ways we may never fully comprehend. So let us approach each interaction with kindness, each challenge with determination, and each opportunity with enthusiasm.
+  The 1970s and 80s saw the rise of structured programming with languages like C, followed by the object-oriented paradigm exemplified by C++ and Java. These shifts fundamentally changed how we architect software, promoting modularity and reusability.
 
-  As we go about our day, may we remember that every person we encounter is fighting their own battles and carrying their own dreams. By extending empathy and understanding to one another, we can create a world that is more compassionate, more inclusive, and more harmonious for all.
+  In recent years, we've seen a trend towards more expressive and concise languages. Python and Ruby emphasize readability, while functional programming languages like Haskell and Elixir offer new ways to think about computation.
 
-  So here's to new beginnings, to endless possibilities, and to the beautiful journey that lies ahead. Let's make today count!
+  As we look to the future, the line between natural and programming languages continues to blur. With advances in AI and natural language processing, who knows what the next paradigm shift in programming might bring?
   """,
   published_at: DateTime.utc_now() |> DateTime.truncate(:second),
-  slug: "hello-world-2"
+  slug: "evolution-of-programming-languages"
 })

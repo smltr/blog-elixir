@@ -674,19 +674,25 @@ defmodule SamtWeb.CoreComponents do
     for {^field, {msg, opts}} <- errors, do: translate_error({msg, opts})
   end
 
-  attr :href, :string, required: true
+  attr :navigate, :string, required: true
   attr :class, :string, default: nil
   attr :download, :string, default: nil
   attr :rest, :global, include: ~w(disabled form method)
 
   slot :inner_block, required: true
 
-  def styled_link(assigns) do
+  @doc """
+  Styled .link for app nav header that uses navigate.
+
+  ## Example
+      <.nav_link navigate="/blog">blog</.nav_link>
+  """
+  def nav_link(assigns) do
     ~H"""
     <.link
-      href={@href}
+      navigate={@navigate}
       class={[
-        "text-sky-600 hover:text-sky-500",
+        "text-sm text-gray-400 hover:text-sky-500 mr-3",
         @class
       ]}
       download={@download}

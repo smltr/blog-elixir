@@ -1,5 +1,9 @@
 <main class="px-6 py-20 sm:px-4 lg:px-8">
   <div class="mx-auto max-w-lg">
+    <nav class="mb-5">
+      <.nav_link navigate="/">home</.nav_link>
+      <.nav_link navigate="/blog">blog</.nav_link>
+    </nav>
     <.flash_group flash={@flash} />
     <%= @inner_content %>
   </div>
