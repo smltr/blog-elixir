@@ -676,8 +676,7 @@ defmodule SamtWeb.CoreComponents do
 
   attr :navigate, :string, required: true
   attr :class, :string, default: nil
-  attr :download, :string, default: nil
-  attr :rest, :global, include: ~w(disabled form method)
+  attr :rest, :global, include: ~w(disabled form method navigate href)
 
   slot :inner_block, required: true
 
@@ -695,10 +694,9 @@ defmodule SamtWeb.CoreComponents do
         "text-sm text-gray-400 hover:text-sky-500 mr-3",
         @class
       ]}
-      download={@download}
       {@rest}
     >
-      <%= render_slot(@inner_block) %>
+      <%= render_slot(@inner_block) %><.icon name="hero-arrow-long-right-mini" class="w-3 h-3" />
     </.link>
     """
   end

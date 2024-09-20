@@ -1,13 +1,11 @@
 <main class="px-6 py-20 sm:px-4 lg:px-8">
   <div class="mx-auto max-w-lg">
     <nav class="mb-5">
-      <.nav_link navigate="/">home</.nav_link>
-      <.nav_link navigate="/blog">blog</.nav_link>
+      <.nav_link navigate={~p"/"}>home</.nav_link>
+      <.nav_link navigate={~p"/blog"}>blog</.nav_link>
       <.nav_link navigate="https://github.com/smltr/samt">github</.nav_link>
       <.nav_link navigate="https://linkedin.com/in/sam-trouy">linkedin</.nav_link>
-      <.nav_link navigate={~p"/Sam_Trouy_Resume.pdf"} target="_blank">
-        resume
-      </.nav_link>
+      <.nav_link navigate={~p"/Sam_Trouy_Resume.pdf"} target="_blank">resume</.nav_link>
     </nav>
     <.flash_group flash={@flash} />
     <%= @inner_content %>

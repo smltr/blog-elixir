@@ -17,7 +17,8 @@ defmodule SamtWeb do
   those modules here.
   """
 
-  def static_paths, do: ~w(assets fonts images favicon.ico robots.txt Sam_Trouy_Resume.pdf)
+  def static_paths,
+    do: ~w(assets fonts images favicon.svg robots.txt Sam_Trouy_Resume.pdf)
 
   def router do
     quote do
