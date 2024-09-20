@@ -9,9 +9,13 @@ defmodule SamtWeb.BlogLive do
 
   def render(assigns) do
     ~H"""
-    <h1 class="text-2xl font-bold mb-4">All Blog Posts</h1>
-    <%= for post <- @posts do %>
-      <PostSummary.render post={post} />
+    <%= if length(@posts) >= 1 do %>
+      <h1 class="text-2xl font-bold mb-4">All Blog Posts</h1>
+      <%= for post <- @posts do %>
+        <PostSummary.render post={post} />
+      <% end %>
+    <% else %>
+      <h1 class="text-2xl font-bold mb-4">Coming soon!</h1>
     <% end %>
     """
   end

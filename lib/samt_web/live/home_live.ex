@@ -20,9 +20,11 @@ defmodule SamtWeb.HomeLive do
       LLMs are a huge interest of mine. I use AI assistants to supercharge my work and learning.
     </p>
 
-    <h1 class="text-2xl font-bold mt-4 mb-4">Recent Blog Posts</h1>
-    <%= for post <- @posts do %>
-      <PostSummary.render post={post} />
+    <%= if length(@posts) >= 1 do %>
+      <h1 class="text-2xl font-bold mt-4 mb-4">Recent Blog Posts</h1>
+      <%= for post <- @posts do %>
+        <PostSummary.render post={post} />
+      <% end %>
     <% end %>
     """
   end
