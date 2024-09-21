@@ -6,7 +6,7 @@ defmodule SamtWeb.Blog.Post do
   def render(assigns) do
     ~H"""
     <article>
-      <h1 class="text-2xl font-bold mb-4"><%= @post.title %></h1>
+      <h1 class="text-2xl text-zinc-600 font-bold mb-4"><%= @post.title %></h1>
       <time class="text-sm text-gray-400">
         <%= Calendar.strftime(@post.published_at, "%B %d, %Y") %>
       </time>

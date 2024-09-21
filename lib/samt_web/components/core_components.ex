@@ -691,13 +691,32 @@ defmodule SamtWeb.CoreComponents do
     <.link
       navigate={@navigate}
       class={[
-        "text-sm text-gray-400 hover:text-sky-500 mr-3",
+        "text-sm text-zinc-400 hover:text-zinc-500 mr-2",
         @class
       ]}
       {@rest}
     >
       <%= render_slot(@inner_block) %><.icon name="hero-arrow-long-right-mini" class="w-3 h-3" />
     </.link>
+    """
+  end
+
+  @doc """
+  Renders a horizontal divider.
+
+  ## Examples
+
+      <.divider />
+      <.divider class="w-1/2" />
+  """
+  attr :class, :string, default: nil
+
+  def divider(assigns) do
+    ~H"""
+    <div class={[
+      "border-t border-gray-300 my-6",
+      @class
+    ]} />
     """
   end
 end

@@ -6,8 +6,8 @@ defmodule SamtWeb.Blog.PostSummary do
   def render(assigns) do
     ~H"""
     <article class="mb-4">
-      <h2 class="text-md font-bold">
-        <.link class="hover:text-sky-500" href={~p"/blog/#{@post.slug}"}>
+      <h2 class="text-md text-zinc-500 font-bold">
+        <.link class="hover:text-zinc-600" href={~p"/blog/#{@post.slug}"}>
           <%= @post.title %><.icon name="hero-arrow-long-right-mini" class="w-4 h-4" />
         </.link>
       </h2>
