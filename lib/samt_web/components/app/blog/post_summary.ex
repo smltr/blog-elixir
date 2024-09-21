@@ -8,7 +8,12 @@ defmodule SamtWeb.Blog.PostSummary do
     <article class="mb-4">
       <h2 class="text-md text-zinc-500 font-bold">
         <.link class="hover:text-zinc-600" href={~p"/blog/#{@post.slug}"}>
-          <%= @post.title %><.icon name="hero-arrow-long-right-mini" class="w-4 h-4" />
+          <%= for word <- Enum.reverse(tl(Enum.reverse(String.split(@post.title, " ")))),
+                  do: word <> " " %>
+          <span class="inline-flex items-center">
+            <%= List.last(String.split(@post.title, " ")) %>
+            <.icon name="hero-arrow-long-right-mini" class="w-4 h-4 inline-block mt-0.5" />
+          </span>
         </.link>
       </h2>
       <time class="text-sm text-gray-400">

@@ -17,9 +17,9 @@ defmodule SamtWeb.Router do
   scope "/", SamtWeb do
     pipe_through :browser
 
-    live "/", HomeLive
-    live "/blog", BlogLive
-    live "/blog/:slug", BlogPostLive
+    live "/", BlogLive, :home
+    live "/blog", BlogLive, :blog_list
+    live "/blog/:slug", BlogLive, :view_post
   end
 
   # Other scopes may use custom stacks.

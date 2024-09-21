@@ -677,6 +677,7 @@ defmodule SamtWeb.CoreComponents do
   attr :navigate, :string, required: true
   attr :class, :string, default: nil
   attr :rest, :global, include: ~w(disabled form method navigate href)
+  attr :arrow, :string, default: "long"
 
   slot :inner_block, required: true
 
@@ -696,7 +697,10 @@ defmodule SamtWeb.CoreComponents do
       ]}
       {@rest}
     >
-      <%= render_slot(@inner_block) %><.icon name="hero-arrow-long-right-mini" class="w-3 h-3" />
+      <%= render_slot(@inner_block) %><.icon
+        name={"hero-arrow-#{@arrow}-right-mini"}
+        class="w-3 h-3 mb-0.5"
+      />
     </.link>
     """
   end

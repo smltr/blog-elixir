@@ -1,18 +1,18 @@
 <main class="px-6 py-20 sm:px-4 lg:px-8">
-  <div class="mx-auto max-w-lg">
+  <div class="mx-auto max-w-md">
     <div class="mb-1">
       <.link
         navigate={~p"/"}
-        class="ml-[-0.2rem] md:ml-[-2.7rem] text-3xl tracking-tight text-zinc-400 font-bold hover:text-zinc-500"
+        class="ml-[-0.1rem] text-3xl tracking-tight text-zinc-400 font-bold hover:text-zinc-500"
       >
-        <.icon name="hero-command-line-mini" class="md:mr-1 mb-1 w-7 h-7" /> Sam Trouy
+        Sam Trouy<.icon name="hero-arrow-long-right-mini" class="w-6 h-6 mb-0.5" />
       </.link>
     </div>
     <nav>
       <.nav_link navigate={~p"/blog"}>blog</.nav_link>
-      <.nav_link navigate="https://github.com/smltr/samt">github</.nav_link>
-      <.nav_link navigate="https://linkedin.com/in/sam-trouy">linkedin</.nav_link>
-      <.nav_link navigate={~p"/Sam_Trouy_Resume.pdf"} target="_blank">resume</.nav_link>
+      <.nav_link arrow="up" navigate="https://github.com/smltr/samt">github</.nav_link>
+      <.nav_link arrow="up" navigate="https://linkedin.com/in/sam-trouy">linkedin</.nav_link>
+      <.nav_link arrow="up" navigate={~p"/Sam_Trouy_Resume.pdf"} target="_blank">resume</.nav_link>
     </nav>
     <.divider />
     <.flash_group flash={@flash} />
