@@ -9,10 +9,12 @@
       </.link>
     </div>
     <nav>
-      <.nav_link navigate={~p"/blog"}>blog</.nav_link>
+      <.nav_link arrow="long" navigate={~p"/blog"}>blog</.nav_link>
       <.nav_link arrow="up" navigate="https://github.com/smltr/samt">github</.nav_link>
       <.nav_link arrow="up" navigate="https://linkedin.com/in/sam-trouy">linkedin</.nav_link>
-      <.nav_link arrow="up" navigate={~p"/Sam_Trouy_Resume.pdf"} target="_blank">resume</.nav_link>
+      <.nav_link arrow="up" navigate={~p"/Sam_Trouy_Resume.pdf"} target="_blank">
+        resume
+      </.nav_link>
     </nav>
     <.divider />
     <.flash_group flash={@flash} />
