@@ -674,7 +674,7 @@ defmodule SamtWeb.CoreComponents do
     for {^field, {msg, opts}} <- errors, do: translate_error({msg, opts})
   end
 
-  attr :navigate, :string, required: true
+  # attr :navigate, :string, required: true
   attr :class, :string, default: nil
   attr :rest, :global, include: ~w(disabled form method navigate href)
   attr :arrow, :string, default: "long"
@@ -690,17 +690,13 @@ defmodule SamtWeb.CoreComponents do
   def nav_link(assigns) do
     ~H"""
     <.link
-      navigate={@navigate}
       class={[
         "text-sm text-zinc-400 hover:text-zinc-500 mr-2",
         @class
       ]}
       {@rest}
     >
-      <%= render_slot(@inner_block) %><.icon
-        name={"hero-arrow-#{@arrow}-right-mini"}
-        class="w-3 h-3 mb-0.5"
-      />
+      <%= render_slot(@inner_block) %>
     </.link>
     """
   end

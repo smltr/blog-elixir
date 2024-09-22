@@ -56,7 +56,7 @@ defmodule SamtWeb.BlogLive do
   def blog_list(assigns) do
     ~H"""
     <%= if length(@posts) >= 1 do %>
-      <h1 class="text-xl font-bold mb-2 md:ml-[-2.1rem]">
+      <h1 class="text-xl font-bold mb-3 md:ml-[-2.1rem]">
         <.icon name="hero-newspaper" class="mb-1 mr-1" /> All Blog Posts
       </h1>
       <%= for post <- @posts do %>

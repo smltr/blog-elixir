@@ -5,7 +5,7 @@ defmodule SamtWeb.Blog.PostSummary do
 
   def render(assigns) do
     ~H"""
-    <article class="mb-4">
+    <article class="mb-3">
       <h2 class="text-md text-zinc-500 font-bold">
         <.link class="hover:text-zinc-600" href={~p"/blog/#{@post.slug}"}>
           <%= for word <- Enum.reverse(tl(Enum.reverse(String.split(@post.title, " ")))),
@@ -19,9 +19,9 @@ defmodule SamtWeb.Blog.PostSummary do
       <time class="text-sm text-gray-400">
         <%= Calendar.strftime(@post.published_at, "%B %d, %Y") %>
       </time>
-      <p class="text-sm mt-0.5">
+      <%!-- <p class="text-sm mt-0.5">
         <%= String.slice(@post.content, 0, 125) <> "..." %>
-      </p>
+      </p> --%>
     </article>
     """
   end

@@ -36,3 +36,6 @@ npm-debug.log
 /assets/node_modules/
 
 config/dev.secret.exs
+
+blog_post_drafts
+insert_post.sql

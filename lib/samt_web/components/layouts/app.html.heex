@@ -1,5 +1,5 @@
 <main class="px-6 py-20 sm:px-4 lg:px-8">
-  <div class="mx-auto max-w-md">
+  <div class="mx-auto max-w-lg">
     <div class="mb-1">
       <.link
         navigate={~p"/"}
@@ -9,11 +9,17 @@
       </.link>
     </div>
     <nav>
-      <.nav_link arrow="long" navigate={~p"/blog"}>blog</.nav_link>
-      <.nav_link arrow="up" navigate="https://github.com/smltr/samt">github</.nav_link>
-      <.nav_link arrow="up" navigate="https://linkedin.com/in/sam-trouy">linkedin</.nav_link>
-      <.nav_link arrow="up" navigate={~p"/Sam_Trouy_Resume.pdf"} target="_blank">
-        resume
+      <.nav_link navigate={~p"/blog"}>
+        blog<.icon name="hero-arrow-long-right-mini" class="w-3 h-3 mb-0.5" />
+      </.nav_link>
+      <.nav_link href="https://github.com/smltr/samt">
+        github<.icon name="hero-arrow-up-right-mini" class="w-3 h-3 mb-0.5" />
+      </.nav_link>
+      <.nav_link href="https://linkedin.com/in/sam-trouy">
+        linkedin<.icon name="hero-arrow-up-right-mini" class="w-3 h-3 mb-0.5" />
+      </.nav_link>
+      <.nav_link href={~p"/Sam_Trouy_Resume.pdf"} target="_blank">
+        resume<.icon name="hero-arrow-up-right-mini" class="w-3 h-3 mb-0.5" />
       </.nav_link>
     </nav>
     <.divider />
