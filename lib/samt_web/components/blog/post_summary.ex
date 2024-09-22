@@ -7,7 +7,7 @@ defmodule SamtWeb.Blog.PostSummary do
     ~H"""
     <article class="mb-3">
       <h2 class="text-md text-zinc-500 font-bold">
-        <.link class="hover:text-zinc-600" href={~p"/blog/#{@post.slug}"}>
+        <.link class="hover:text-zinc-600" navigate={~p"/blog/#{@post.slug}"}>
           <%= for word <- Enum.reverse(tl(Enum.reverse(String.split(@post.title, " ")))),
                   do: word <> " " %>
           <span class="inline-flex items-center">
