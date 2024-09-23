@@ -31,10 +31,15 @@ defmodule SamtWeb.BlogLive do
       I'm Sam, a full stack software developer based out of Chattanooga, TN. The startup world fascinates me and there's always a handful of ideas on my mind about possible mini-startups of my own. I previously worked as a founding engineer for 2 years.
     </p>
     <p class="mb-2">
-      I enjoy tinkering with new programming languages and frameworks. I like rapid prototyping and am trying to settle down on my go-to toolset. Recently I've been building with Elixir/Phoenix/LiveView.
+      All who need an accountability partner, or just a fresh set of eyes on a problem, are invited to collaborate with me. I use Zed, an awesome 'multiplayer' code editor with a great collaboration feature.
     </p>
-    <p class="">
-      I'm building this blog both because I want to, and because I need a recent portfolio project. Making things only for show isn't my favorite use of time, so this seemed like a win-win.
+    <p class="mb-2">
+      <.link
+        href="https://zed.dev/channel/Stuff-and-Junk-15158"
+        class="font-bold text-zinc-500 hover:text-zinc-600"
+      >
+        Join my Zed channel<.icon name="hero-arrow-long-right-mini" class="mb-0.5 h-4 w-4" />
+      </.link>
     </p>
     <.divider class="w-1/3" />
     <h1 class="text-xl font-bold mb-2 md:ml-[-2.1rem]">
