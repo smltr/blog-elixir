@@ -14,7 +14,7 @@ config :samt,
 # Configures the endpoint
 config :samt, SamtWeb.Endpoint,
   url: [host: "localhost"],
-  check_origin: ["https://samt.fly.dev", "https://trouy.me"],
+  check_origin: ["https://samt.fly.dev", "https://trouy.me", "https://trouy.dev"],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
     formats: [html: SamtWeb.ErrorHTML, json: SamtWeb.ErrorJSON],
