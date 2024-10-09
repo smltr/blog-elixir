@@ -1,8 +1,10 @@
-# trouy.me
+# trouy.dev
 
 A personal landing page and blog.
 
+Built using Elixir, Phoenix and LiveView.
+
 ## TODO
 
-'Code with me' that shows when I'm online on zed and a link to join a channel
-Blog posts/admin panel
+- Implement an easier way to create blog posts (currently manually sending to DB) as well as a way to better display them.
+- Add an interesting, real-time feature that can show the unique capabilities of LiveView.
