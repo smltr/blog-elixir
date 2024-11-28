@@ -34,4 +34,22 @@ defmodule Samt.Blog do
   def get_post_by_slug!(slug) do
     Repo.get_by!(Post, slug: slug)
   end
+
+  @doc """
+  Create a post.
+
+  ## Examples
+
+      iex> create_post(%{title: "Example Post", content: "Content", slug: "example-post"})
+      {:ok, %Post{}}
+
+      iex> create_post(%{title: nil})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_post(attrs \\ %{}) do
+    %Post{}
+    |> Post.changeset(attrs)
+    |> Repo.insert()
+  end
 end

@@ -39,3 +39,5 @@ config/dev.secret.exs
 
 blog_post_drafts
 insert_post.sql
+
+.env
